@@ -66,5 +66,5 @@
 
     <!--Title color-->
     <color name="event_title">#a0000000</color>
-    <color name="event_title_highlight">#e00</color>
+    <color name="event_title_highlight">#e33</color>
 </resources>
