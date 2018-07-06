@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToxCon 2018 Schedule</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://tox.fahrplan.zoff.cc//">https://tox.fahrplan.zoff.cc//</a>]]>
+    </string>
+    <string name="source_code">
+    </string>
+    <string name="google_play_store">
+    </string>
+    <string name="copyright_logo">
+    </string>
+</resources>
