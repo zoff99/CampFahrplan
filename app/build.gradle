@@ -43,7 +43,7 @@ android {
 
     productFlavors {
         toxcon2018 {
-            applicationId "nerd.tuxmobil.fahrplan.toxcon"
+            applicationId "com.zoffcc.fahrplan.toxcon"
             buildConfigField "String", "SCHEDULE_URL", '"https://tox.fahrplan.zoff.cc/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://tox.fahrplan.zoff.cc"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
