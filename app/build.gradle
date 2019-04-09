@@ -34,7 +34,7 @@ android {
         // Build information
         buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
-        buildConfigField "String", "C3NAV_URL", "\"https://35c3.c3nav.de/l/\""
+        buildConfigField "String", "C3NAV_URL", "\"https://tox.zoff.cc//\""
     }
 
     buildTypes {
@@ -67,19 +67,18 @@ android {
             buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.tox.zoff.cc/toxcon2019/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://pretalx.tox.zoff.cc/toxcon2019/event/%1$s.html"'
             buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
-            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
-            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
-            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "13"
-            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
-            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "8"
-            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "11"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "13"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
             buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
             buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "false"
-            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
-            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2015/public/events/%s/feedback/new"'
-
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://google.com"'
         }
     }
 
