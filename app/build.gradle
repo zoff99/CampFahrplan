@@ -25,8 +25,8 @@ android {
     buildToolsVersion Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 57
-        versionName "1.39.0"
+        versionCode 10001
+        versionName "1.0.1"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
         archivesBaseName = "Fahrplan-$versionName"
@@ -55,31 +55,18 @@ android {
     }
 
     signingConfigs {
-        camp2015 {
-            storeFile file(props['signing.camp2015-release.keystoreFilePath'])
-            storePassword props['signing.camp2015-release.keystorePassword']
-            keyAlias props['signing.camp2015-release.keyAlias']
-            keyPassword props['signing.camp2015-release.keyPassword']
-        }
-        ccc35c3 {
-            storeFile file(props['signing.ccc35c3-release.keystoreFilePath'])
-            storePassword props['signing.ccc35c3-release.keystorePassword']
-            keyAlias props['signing.ccc35c3-release.keyAlias']
-            keyPassword props['signing.ccc35c3-release.keyPassword']
-        }
     }
 
     def defaultDimension = "default"
     flavorDimensions defaultDimension
 
     productFlavors {
-        camp2015 {
+        toxcon2019 {
             dimension defaultDimension
-            applicationId "nerd.tuxmobil.fahrplan.camp"
-            signingConfig signingConfigs.camp2015
-            buildConfigField "String", "SCHEDULE_URL", '"https://events.ccc.de/camp/2015/Fahrplan/schedule.xml"'
-            buildConfigField "String", "EVENT_URL", '"http://events.ccc.de/camp/2015/Fahrplan/events/%1$s.html"'
-            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
+            applicationId "com.zoffcc.fahrplan.toxcon"
+            buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.tox.zoff.cc/toxcon2019/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://pretalx.tox.zoff.cc/toxcon2019/event/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "13"
@@ -93,26 +80,6 @@ android {
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2015/public/events/%s/feedback/new"'
 
-        }
-        ccc35c3 {
-            dimension defaultDimension
-            applicationId "info.metadude.android.congress.schedule"
-            signingConfig signingConfigs.ccc35c3
-            buildConfigField "String", "SCHEDULE_URL", '"https://raw.githubusercontent.com/voc/35C3_schedule/master/everything.schedule.xml"'
-            buildConfigField "String", "EVENT_URL", '"https://events.ccc.de/congress/2018/Fahrplan/events/%1$s.html"'
-            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
-            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
-            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "12"
-            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "27"
-            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
-            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
-            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
-            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
-            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "true"
-            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
-            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
-            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+35c3@googlemail.com"'
-            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/35C3/public/events/%s/feedback/new"'
         }
     }
 
